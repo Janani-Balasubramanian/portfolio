@@ -1,0 +1,30 @@
+# Janani B — Portfolio
+
+A responsive portfolio for Janani B, a pre-final-year Computer Science and Business Systems student at Rajalakshmi Institute of Technology, Chennai.
+
+## Features
+
+- Brown and mustard theme with a split hero and alternating sections
+- Interactive Orbit, Wave, and Galaxy particle formations
+- Expandable project descriptions, education, skills, and experience
+- Downloadable updated résumé
+- Motion pause control and reduced-motion support
+
+## Run locally
+
+The site uses plain HTML, CSS, and JavaScript. No build or installation is required.
+
+```sh
+python -m http.server 4173 --directory dist
+```
+
+Open http://localhost:4173 in your browser. You can also open `dist/index.html` directly. Google Fonts requires an internet connection; fallback fonts are provided.
+
+## Files
+
+- `dist/index.html` — portfolio content
+- `dist/style.css` — layout, colors, and animation styling
+- `dist/app.js` — particle interactions and navigation behavior
+- `dist/Janani_B_Resume.pdf` — downloadable résumé
+
+Upload the contents of `dist` to a static web host to serve the website.
