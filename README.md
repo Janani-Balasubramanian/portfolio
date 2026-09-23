@@ -15,16 +15,17 @@ A responsive portfolio for Janani B, a pre-final-year Computer Science and Busin
 The site uses plain HTML, CSS, and JavaScript. No build or installation is required.
 
 ```sh
-python -m http.server 4173 --directory dist
+python -m http.server 4173
 ```
 
-Open http://localhost:4173 in your browser. You can also open `dist/index.html` directly. Google Fonts requires an internet connection; fallback fonts are provided.
+Open http://localhost:4173 in your browser. You can also open `index.html` directly. Google Fonts requires an internet connection; fallback fonts are provided.
 
 ## Files
 
-- `dist/index.html` — portfolio content
-- `dist/style.css` — layout, colors, and animation styling
-- `dist/app.js` — particle interactions and navigation behavior
-- `dist/Janani_B_Resume.pdf` — downloadable résumé
+- `index.html` — portfolio content
+- `style.css` — layout, colors, and animation styling
+- `app.js` — particle interactions and navigation behavior
+- `Janani_B_Resume.pdf` — downloadable résumé
 
-Upload the contents of `dist` to a static web host to serve the website.
+Upload the HTML, CSS, JavaScript, and PDF files to a static web host to serve the website.
+
