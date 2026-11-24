@@ -1,3 +1,5 @@
+// Animation is an enhancement: content and native navigation must remain usable.
+try {
 // ═══ SETUP ═══════════════════════════════════════════════════════
 const canvas = document.querySelector('#field');
 const ctx    = canvas.getContext('2d');
@@ -308,3 +310,14 @@ addEventListener('resize', scrollState);
 document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', scrollState));
 scrollState();
 document.querySelector('#year').textContent = new Date().getFullYear();
+} catch (error) {
+  document.querySelectorAll('.waiting').forEach(el => el.classList.remove('waiting'));
+  document.body.classList.add('paused');
+  document.documentElement.classList.add('motion-paused');
+  const control = document.querySelector('#motion');
+  if (control) { control.textContent = 'Static view'; control.disabled = true; }
+  document.querySelectorAll('.mode').forEach(control => { control.disabled = true; });
+  const year = document.querySelector('#year');
+  if (year) year.textContent = new Date().getFullYear();
+  console.warn('Animations unavailable; portfolio content remains accessible.', error);
+}

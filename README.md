@@ -22,7 +22,7 @@ The site uses plain HTML, CSS, and JavaScript. No build or installation is requi
 python -m http.server 4173
 ```
 
-Open http://localhost:4173 in your browser. You can also open `index.html` directly. Google Fonts requires an internet connection; fallback fonts are provided.
+Open http://localhost:4173 in your browser. You can also open `index.html` directly. Fonts are included locally with their open-source licenses; no external font service is required.
 
 ## Files
 
@@ -32,3 +32,19 @@ Open http://localhost:4173 in your browser. You can also open `index.html` direc
 - `Janani_B_Resume.pdf` — downloadable résumé
 
 Upload the HTML, CSS, JavaScript, and PDF files to a static web host to serve the website.
+
+## Keeping this address working
+
+Stable public address: https://janani-balasubramanian.github.io/portfolio/
+
+Keep the GitHub account and the public `portfolio` repository, and leave Pages enabled with GitHub Actions as its source. Renaming the account or repository changes the address. Deleting the repository or disabling Pages takes the site offline; the custom 404 page cannot prevent those cases. There is no paid domain to renew and no API key, database, server process, or package installation required to view this site.
+
+Before every deployment, the workflow checks JavaScript syntax, local assets, section anchors, fonts, and the PDF. Failed checks prevent the new version from being deployed. These checks reduce regressions; they do not prove that every browser interaction is bug-free. GitHub Actions or hosting policies can change and may eventually require maintenance.
+
+## Backup and recovery
+
+Run `python scripts/validate.py` to validate and assemble `dist/`. Copy the entire contents of `dist/` to any static host to restore the website, including all fonts and the resume. It also opens locally from `dist/index.html`. Keep an additional backup outside this computer and GitHub.
+
+To restore an earlier version, revert the problematic commit and push to main, or use the Actions tab to run the publishing workflow again. Do not delete the repository to undo a change. For a missing repository, restore from the Git bundle backup into a new repository named `portfolio` under the same account, then enable GitHub Pages with GitHub Actions.
+
+A mistyped URL displays `404.html` with links back to the portfolio and GitHub profile. Hosting outages, account restrictions, repository deletion, and future platform changes remain outside this website's control.
