@@ -1,16 +1,11 @@
 (() => {
   const endpoint = 'https://janani-portfolio-assistant.lastblanket64.chatgpt.site/api/chat';
-  const launcher = document.querySelector('#ask-launch');
   const panel = document.querySelector('#ask-panel');
-  if (!panel?.showModal || !launcher) return;
+  if (!panel) return;
   const form = panel.querySelector('form'), input = panel.querySelector('input');
   const log = panel.querySelector('#ask-log'), status = panel.querySelector('#ask-status');
   const history = []; let busy = false;
   function message(text, role) { const item=document.createElement('div'); item.className='ask-message '+role; const label=document.createElement('strong');label.textContent=role==='user'?'You':'Ask Janani · AI';item.append(label,document.createTextNode(text));log.append(item);log.scrollTop=log.scrollHeight; }
-  launcher.hidden=false;
-  launcher.addEventListener('click',()=>{panel.showModal();input.focus();});
-  panel.querySelector('.ask-close').addEventListener('click',()=>panel.close());
-  panel.addEventListener('close',()=>launcher.focus());
   message('Hi! I’m Janani’s AI portfolio guide. Ask about her skills, projects, education, or experience. I’m an assistant, not Janani herself.','model');
   async function ask(text) {
     text=text.trim(); if(!text || busy)return; busy=true;message(text,'user');input.value='';

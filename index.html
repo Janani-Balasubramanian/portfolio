@@ -4,7 +4,7 @@
 <meta name="description" content="Janani B is a pre-final-year Computer Science and Business Systems student exploring data analytics, thoughtful software, and scientific discovery.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2303070f'/%3E%3Ctext x='7' y='46' font-family='Arial' font-size='34' font-weight='bold' fill='%2387ceeb'%3EJB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/chat.css">
+<link rel="stylesheet" href="assets/chat.css?v=inline-1">
 <link rel="stylesheet" href="style.css?v=sky-shuttle-2026">
 </head>
 <body>
@@ -61,6 +61,7 @@
       <h1>JANANI<br><span class="h1-outlined">B<span class="h1-dot">.</span></span></h1>
       <p class="hero-sub">A little <em>curiosity.</em><br>Infinite possibility.</p>
       <a class="btn-launch" href="#work"><span>Explore my universe</span><span>↘</span></a>
+      <a class="ask-hero-link" href="#ask-janani">Ask me a question</a>
     </div>
 
     <div class="field-controls">
@@ -259,6 +260,21 @@
     <p class="more-achievements muted">Also: EY Techathon 6.0 Round 1 participant · IIT Bombay Techfest college ambassador · Freshathon 2025 participant.</p>
   </section>
 
+<section id="ask-janani" class="section ask-section" aria-labelledby="ask-heading">
+<p class="eyebrow">GET TO KNOW ME</p>
+<h2 id="ask-heading">A conversation<br><em>about my work.</em></h2>
+<p class="muted ask-intro">Curious about my skills, projects, or journey? Ask my portfolio assistant right here.</p>
+<div class="ask-panel" id="ask-panel" aria-labelledby="ask-title" aria-describedby="ask-note">
+  <div class="ask-head"><strong id="ask-title">Ask Janani</strong><span class="ask-badge">Portfolio AI guide</span></div>
+  <p class="ask-note" id="ask-note">AI guide to my public portfolio. Answers may be inaccurate. Messages and recent chat context are sent to Google Gemini; avoid sensitive information. Chat is kept only in this page’s memory.</p>
+  <div class="ask-log" id="ask-log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversation"></div>
+  <div class="ask-suggestions"><button type="button" data-question="Tell me about Janani">About me</button><button type="button" data-question="What skills does Janani have?">Skills</button><button type="button" data-question="Tell me about Janani’s projects">Projects</button><button type="button" data-question="What internship experience does Janani have?">Experience</button></div>
+  <p class="ask-status" id="ask-status" role="status"></p>
+  <form class="ask-form"><label for="ask-input">Ask about Janani</label><div class="ask-row"><input id="ask-input" maxlength="1000" required autocomplete="off" placeholder="What has she built?"><button type="submit">Send</button></div></form>
+</div>
+<noscript><p>Chat needs JavaScript. You can still explore my projects and contact me by email.</p></noscript>
+</section>
+
   <!-- ═══ CONTACT ═══ -->
   <section id="contact" class="section contact reveal" data-coord="LOC // SEC-05 · COM-S">
     <p class="eyebrow">05 / OPEN COMMS CHANNEL</p>
@@ -280,16 +296,8 @@
 </footer>
 
 <div class="cursor-aura" aria-hidden="true"></div>
-<button class="ask-launch" id="ask-launch" aria-haspopup="dialog" aria-controls="ask-panel" hidden>Ask Janani</button>
-<dialog class="ask-panel" id="ask-panel" aria-labelledby="ask-title" aria-describedby="ask-note">
-  <div class="ask-head"><strong id="ask-title">Ask Janani</strong><button class="ask-close" type="button" aria-label="Close chat">Close</button></div>
-  <p class="ask-note" id="ask-note">AI guide to my public portfolio. Answers may be inaccurate. Messages and recent chat context are sent to Google Gemini; avoid sensitive information. Chat is kept only in this page’s memory.</p>
-  <div class="ask-log" id="ask-log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversation"></div>
-  <div class="ask-suggestions"><button type="button" data-question="Tell me about Janani">About me</button><button type="button" data-question="What skills does Janani have?">Skills</button><button type="button" data-question="Tell me about Janani’s projects">Projects</button><button type="button" data-question="What internship experience does Janani have?">Experience</button></div>
-  <p class="ask-status" id="ask-status" role="status"></p>
-  <form class="ask-form"><label for="ask-input">Ask about Janani</label><div class="ask-row"><input id="ask-input" maxlength="1000" required autocomplete="off" placeholder="What has she built?"><button type="submit">Send</button></div></form>
-</dialog>
+
 <script src="app.js?v=sky-shuttle-2026"></script>
-<script src="assets/chat.js"></script>
+<script src="assets/chat.js?v=inline-1"></script>
 </body>
 </html>

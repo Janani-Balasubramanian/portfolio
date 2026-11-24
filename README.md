@@ -50,7 +50,7 @@ To restore an earlier version, revert the problematic commit and push to main, o
 A mistyped URL displays `404.html` with links back to the portfolio and GitHub profile. Hosting outages, account restrictions, repository deletion, and future platform changes remain outside this website's control.
 ## Ask Janani assistant
 
-The floating Ask Janani button opens a live AI guide to this public portfolio. It uses a separate Sites-hosted Gemini endpoint; the API key is never shipped in these files. The assistant is instructed to answer only from a snapshot of the portfolio and to decline unrelated questions or unknown details. AI answers may still be inaccurate.
+The embedded Ask Janani section provides a live AI guide directly inside this portfolio. It uses a separate Sites-hosted Gemini endpoint; the API key is never shipped in these files. The assistant is instructed to answer only from a snapshot of the portfolio and to decline unrelated questions or unknown details. AI answers may still be inaccurate.
 
 Questions and up to six recent chat messages are sent to Google Gemini through the server. The frontend keeps chat in memory only. The core site, resume, and navigation remain usable when chat is offline. API quotas and provider availability affect the chat independently of GitHub Pages.
 
