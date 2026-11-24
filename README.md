@@ -48,3 +48,10 @@ Run `python scripts/validate.py` to validate and assemble `dist/`. Copy the enti
 To restore an earlier version, revert the problematic commit and push to main, or use the Actions tab to run the publishing workflow again. Do not delete the repository to undo a change. For a missing repository, restore from the Git bundle backup into a new repository named `portfolio` under the same account, then enable GitHub Pages with GitHub Actions.
 
 A mistyped URL displays `404.html` with links back to the portfolio and GitHub profile. Hosting outages, account restrictions, repository deletion, and future platform changes remain outside this website's control.
+## Ask Janani assistant
+
+The floating Ask Janani button opens a live AI guide to this public portfolio. It uses a separate Sites-hosted Gemini endpoint; the API key is never shipped in these files. The assistant is instructed to answer only from a snapshot of the portfolio and to decline unrelated questions or unknown details. AI answers may still be inaccurate.
+
+Questions and up to six recent chat messages are sent to Google Gemini through the server. The frontend keeps chat in memory only. The core site, resume, and navigation remain usable when chat is offline. API quotas and provider availability affect the chat independently of GitHub Pages.
+
+When updating portfolio facts, also update the chat server's `worker/profile.json` in the local `janani-portfolio-chat` project and republish that server. The frontend endpoint is configured in `assets/chat.js`. No scheduled monitoring has been configured.

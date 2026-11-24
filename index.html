@@ -4,6 +4,7 @@
 <meta name="description" content="Janani B is a pre-final-year Computer Science and Business Systems student exploring data analytics, thoughtful software, and scientific discovery.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2303070f'/%3E%3Ctext x='7' y='46' font-family='Arial' font-size='34' font-weight='bold' fill='%2387ceeb'%3EJB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/chat.css">
 <link rel="stylesheet" href="style.css?v=sky-shuttle-2026">
 </head>
 <body>
@@ -279,6 +280,16 @@
 </footer>
 
 <div class="cursor-aura" aria-hidden="true"></div>
+<button class="ask-launch" id="ask-launch" aria-haspopup="dialog" aria-controls="ask-panel" hidden>Ask Janani</button>
+<dialog class="ask-panel" id="ask-panel" aria-labelledby="ask-title" aria-describedby="ask-note">
+  <div class="ask-head"><strong id="ask-title">Ask Janani</strong><button class="ask-close" type="button" aria-label="Close chat">Close</button></div>
+  <p class="ask-note" id="ask-note">AI guide to my public portfolio. Answers may be inaccurate. Messages and recent chat context are sent to Google Gemini; avoid sensitive information. Chat is kept only in this page’s memory.</p>
+  <div class="ask-log" id="ask-log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversation"></div>
+  <div class="ask-suggestions"><button type="button" data-question="Tell me about Janani">About me</button><button type="button" data-question="What skills does Janani have?">Skills</button><button type="button" data-question="Tell me about Janani’s projects">Projects</button><button type="button" data-question="What internship experience does Janani have?">Experience</button></div>
+  <p class="ask-status" id="ask-status" role="status"></p>
+  <form class="ask-form"><label for="ask-input">Ask about Janani</label><div class="ask-row"><input id="ask-input" maxlength="1000" required autocomplete="off" placeholder="What has she built?"><button type="submit">Send</button></div></form>
+</dialog>
 <script src="app.js?v=sky-shuttle-2026"></script>
+<script src="assets/chat.js"></script>
 </body>
 </html>
