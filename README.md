@@ -1,6 +1,6 @@
 <p align="center"><img src=".github/repository-banner.svg" alt="Janani B — Portfolio — Curiosity, code, and possibility" width="100%" /></p>
 
-<p align="center"><a href="https://github.com/Janani-Balasubramanian">GitHub profile</a> · <a href="https://github.com/Janani-Balasubramanian/portfolio">Portfolio</a> · <a href="https://github.com/Janani-Balasubramanian/portfolio/issues">Issues</a></p>
+<p align="center"><a href="https://github.com/Janani-Balasubramanian">GitHub profile</a> · <a href="https://janani-balasubramanian.github.io/portfolio/">Live portfolio</a> · <a href="https://github.com/Janani-Balasubramanian/portfolio/issues">Issues</a></p>
 
 # Janani B — Portfolio
 
@@ -8,7 +8,7 @@ A responsive portfolio for Janani B, a pre-final-year Computer Science and Busin
 
 ## Features
 
-- Brown and mustard theme with a split hero and alternating sections
+- Space-inspired design with animated stars and interactive particle formations
 - Interactive Orbit, Wave, and Galaxy particle formations
 - Expandable project descriptions, education, skills, and experience
 - Downloadable updated résumé
