@@ -7,7 +7,7 @@
   const dialog = document.createElement('dialog');
   dialog.className = 'portal-window';
   dialog.setAttribute('aria-labelledby','portal-title');
-  dialog.innerHTML = '<div class="portal-bar"><button type="button" class="portal-back">Back to home</button><span id="portal-title"></span><button type="button" class="portal-next">Next chapter</button></div><div class="portal-body"></div>';
+  dialog.innerHTML = '<div class="portal-bar"><button type="button" class="portal-back">Back to home</button><span id="portal-title"></span><button type="button" class="portal-next">Next page</button></div><div class="portal-body"></div>';
   document.body.append(dialog);
   const body = dialog.querySelector('.portal-body');
   pages.forEach(page => { body.append(page); page.hidden = true; page.classList.remove('waiting'); page.querySelectorAll('.waiting').forEach(el=>el.classList.remove('waiting')); });
@@ -21,7 +21,7 @@
     pages.forEach((page,i) => { page.hidden = i !== index; });
     active = index;
     dialog.querySelector('#portal-title').textContent = titles[index];
-    dialog.querySelector('.portal-next').textContent = index === ids.length-1 ? 'Back to home' : 'Next chapter';
+    dialog.querySelector('.portal-next').textContent = index === ids.length-1 ? 'Back to home' : 'Next page';
     if(!dialog.open) dialog.showModal();
     document.body.classList.add('portal-open');
     body.scrollTop = 0;
@@ -36,6 +36,11 @@
     const id=link.getAttribute('href').slice(1);
     if(!ids.includes(id) && id!=='home') return;
     e.preventDefault(); if(!dialog.open) opener=link; navigate(id);
+  });
+  document.getElementById('home').addEventListener('click', e => {
+    if(e.target.closest('a,button,input,select,textarea') || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || window.getSelection()?.toString()) return;
+    opener = document.querySelector('.portal-enter');
+    navigate(ids[0]);
   });
   dialog.querySelector('.portal-back').addEventListener('click',()=>navigate('home'));
   dialog.querySelector('.portal-next').addEventListener('click',()=>navigate(ids[active+1] || 'home'));
