@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="assets/chat.css?v=professional-2">
 <link rel="stylesheet" href="style.css?v=sky-shuttle-2026">
+<link rel="stylesheet" href="assets/portal.css?v=1">
 </head>
 <body>
 <a class="skip" href="#work">Skip to projects</a>
@@ -60,8 +61,15 @@
       <p class="mission-id">MISSION LOG · JANANI B · 2026</p>
       <h1>JANANI<br><span class="h1-outlined">B<span class="h1-dot">.</span></span></h1>
       <p class="hero-sub">A little <em>curiosity.</em><br>Infinite possibility.</p>
-      <a class="btn-launch" href="#work"><span>Explore my universe</span><span>↘</span></a>
-      <a class="ask-hero-link" href="#ask-janani">Ask me a question</a>
+      <p class="portal-instruction">Choose a chapter. Step inside.</p>
+      <div class="portal-cards" aria-label="Explore the portfolio">
+        <a href="#work"><span>Selected work</span><small>Projects &amp; ideas</small></a>
+        <a href="#about"><span>About me</span><small>Skills &amp; education</small></a>
+        <a href="#experience"><span>My journey</span><small>Experience &amp; discovery</small></a>
+        <a href="#recognition"><span>Milestones</span><small>Awards &amp; learning</small></a>
+        <a href="#ask-janani"><span>Ask Janani</span><small>A conversation about my work</small></a>
+        <a href="#contact"><span>Let’s connect</span><small>Start a conversation</small></a>
+      </div>
     </div>
 
     <div class="field-controls">
@@ -226,7 +234,7 @@
   </section>
 
   <!-- ═══ EXPERIENCE ═══ -->
-  <section class="section experience" data-coord="LOC // SEC-03 · AST-R">
+  <section id="experience" class="section experience" data-coord="LOC // SEC-03 · AST-R">
     <div class="section-heading reveal">
       <p class="eyebrow">03 / FLIGHT RECORD</p>
       <h2>Following the data.<br><span>Reaching for the stars.</span></h2>
@@ -247,7 +255,7 @@
   </section>
 
   <!-- ═══ RECOGNITION ═══ -->
-  <section class="section recognition" data-coord="LOC // SEC-04 · MIL-L">
+  <section id="recognition" class="section recognition" data-coord="LOC // SEC-04 · MIL-L">
     <div class="reveal">
       <p class="eyebrow">04 / COMMENDATIONS</p>
       <h2>Little milestones.<br><span>Big meaning.</span></h2>
@@ -300,5 +308,6 @@
 
 <script src="app.js?v=sky-shuttle-2026"></script>
 <script src="assets/chat.js?v=professional-2"></script>
+<script src="assets/portal.js?v=1"></script>
 </body>
 </html>
